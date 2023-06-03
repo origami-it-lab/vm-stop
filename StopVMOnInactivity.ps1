@@ -1,11 +1,11 @@
 [CmdletBinding()]
 Param()
 
-$idleThreshold = 10 # Inactivity threshold in minutes
+$idleThreshold = 3 # Inactivity threshold in minutes
 $idleTime = 0
 
 while ($true) {
-    Start-Sleep -Seconds 60
+    Start-Sleep -Seconds 30
     $cpuUsage = (Get-Counter -Counter "\Processor(_Total)\% Processor Time" -SampleInterval 1 -MaxSamples 5 |
         Measure-Object -Property CounterSamples -Average).Average
 
