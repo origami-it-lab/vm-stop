@@ -19,7 +19,7 @@ while ($true) {
     Write-Verbose "CPU usage: $cpuUsage"
 
     if ($idleTime -ge $idleThreshold) {
-        az vm stop --name <vm-name> --resource-group <resource-group-name>
+        az vm stop --name WindowsTen --resource-group FREE
         break
     }
 }
